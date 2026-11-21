@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ADD : <a href="/add">Add Employyee</a>
+
+<ul>
+    <% result.forEach(i => { %>
+     <li>
+        <%= i.name %>
+        <%= i.salary %>
+        <%= i.dept %>
+     </li>
+    <% }) %>
+</ul>
+
+<table border="1">
+    <% result.forEach(i => { %>
+     <td>
+         <%= i.name %> 
+        <%= i.salary %>
+        <%= i.dept %> 
+     </td><br>
+    <% }) %>
+</table>
+
+ <div class="container">
+                <div class="row row-cols-3 row-cols-md-3 g-4 justify-content-center align-items-center">
+                        <% result.forEach(i => { %>
+                            <div class="col">
+                            <div class="card">
+                 <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAR5P7R-OFqAB7TwXsIuOQou1ll1UBjK84Wwvyua55Jw&s=10" />
+                <div class="card-body">
+                    <h4 class="card-title"><%= i.name %></h4>
+                    <p class="card-text"><%= i.salary %></p>
+                    <p class="card-text"><%= i.dept %></p>
+                   </div>
+            </div>
+             </div>
+                <% }) %>
+</div>
+                
+</div>
+
+
+</body>
+</html>
